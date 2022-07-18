@@ -1,0 +1,25 @@
+.cart-container{
+    position: absolute;
+    display: flex;
+    right: 50px;
+}
+.cart{
+    height: 30px;
+    color: #50A689;
+    cursor: pointer;
+}
+.unit-container{
+    position: absolute;
+    background-color: #CD5254;
+    height: 25px;
+    border-radius: 50%;
+    width: 25px;
+    display: grid;
+    place-content: center;
+    top: -15px;
+    right: -10px;
+}
+.unit-container span{
+    font-weight: 700;
+    color: #fff;
+}

@@ -51,11 +51,11 @@ const products = [
     
     { 
         id: '6', 
-        name: '', 
-        price: 0, 
-        category: '', 
+        name: 'Toalla + babita', 
+        price: 2500, 
+        category: 'Bebes', 
         img:'images/Products v1/p6-0.jpeg', 
-        stock: 0, 
+        stock: 1, 
         description:''
     },
     

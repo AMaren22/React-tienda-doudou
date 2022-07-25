@@ -1,0 +1,9 @@
+.itemListCont{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+    row-gap: 20px;
+    margin-top: 50px;
+} 

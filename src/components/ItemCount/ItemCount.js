@@ -35,3 +35,8 @@ const ItemCount = ({ addProduct,stock}) => {
 };
 
 export default ItemCount;
+
+
+
+
+  

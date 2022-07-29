@@ -1,0 +1,8 @@
+.itemDetailContainer{
+    height: 500px;
+    width: 900px;
+    margin: 30px 0;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 7px rgba(216, 189, 162, 0.5);
+}

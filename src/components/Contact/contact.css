@@ -1,0 +1,13 @@
+.contactContainer{
+    width: 100%;
+}
+.titleContact{
+    text-align: center;
+    color: #d7ab84;
+    font-size: 40px;
+    margin-top: -40px;
+}
+.textContactContainer{
+    text-align: justify;
+    padding: 20px 70px;
+}

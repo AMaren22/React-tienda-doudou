@@ -1,12 +1,12 @@
-h1{
+.titleProducts{
     text-align: center;
-    color: #813422;
+    color: #d7ab84;
+    font-size: 40px;
 }
 .itemListContainer{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
 }
 .loadingContainer{
     display: flex;

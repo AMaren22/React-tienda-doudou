@@ -1,30 +1,30 @@
 
 import ItemList from "../ItemList/ItemList";
-import { getProducts, getProduct } from "../../asyncMock";
+import { getProductCategory, getProducts } from "../../asyncMock";
 import { useState, useEffect } from "react";
 import "./itemListContainer.css";
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
+import Footer from "../Footer/Footer";
+import FilterProduct from "../FilterProduct/FilterProduct";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = (props) => {
   const [products, setProducts] = useState([])
-  const [product, setProduct] = useState([])
   const [loading,setLoading] = useState(true)
 
-  useEffect(()=>{
-    getProducts().then(resp =>{
-      setProducts(resp)
-    }).catch(err =>{
-      console.log(err)
+  const {categoryId} = useParams();
+
+  useEffect (() =>{
+    const getElements = categoryId ? getProductCategory : getProducts
+
+    getElements(categoryId).then((response) =>{
+      setProducts(response)
+    }).catch((error) =>{
+      console.log(error)
     }).finally(() =>{
       setLoading(false)
     })
-    getProduct().then(resp => {
-      setProduct(resp)
-    }).catch(err =>{
-      console.log(err)
-    })
-
-  },[])
+  
+  },[categoryId])
 
     if(loading){
       return <div className="loadingContainer"><span className="loadingProduct"></span></div>
@@ -33,9 +33,10 @@ const ItemListContainer = (props) => {
   
   return (
     <div className="itemListContainer">
-      <h1>{props.greeting}</h1>
+      <h1 className="titleProducts" >{props.greeting}</h1>
+      <FilterProduct/>
       <ItemList products={products}/>
-      <ItemDetailContainer product={product}/>
+      <Footer/>
     </div>
   );
 };

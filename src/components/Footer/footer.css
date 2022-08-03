@@ -1,0 +1,45 @@
+.footer{
+    background-color: #d7ab84;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px;
+    height: 75px;
+}
+
+.devContainer{
+    height: 40px;
+}
+
+.devContainer p{
+    margin-top: 0;
+    font-size: 0.9em;
+    color: #fff;
+    font-weight: 600;
+}
+.devContainer p:nth-child(2){
+    margin-top: -12px;
+}
+.devContainer span{
+    color: black;
+    margin-left: 5px;
+}
+
+.devContainer p a {
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
+
+}
+.redContainer{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redIcon{
+    width: 30px;
+    height: 100%;
+    color: #fff;
+}

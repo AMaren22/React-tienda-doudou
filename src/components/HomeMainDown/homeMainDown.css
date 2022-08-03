@@ -1,0 +1,40 @@
+
+.mainDownContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mainDownImgContainer{
+    margin-top: 20px;
+    height: 400px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+.mainDownImgContainer img{
+    height: 500px;
+    border-radius: 10px;
+    
+    
+}
+
+.mainDownTextContainer{
+    text-align: justify;
+    margin-top: 20px;
+    padding: 10px 20px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #d7ab84;    
+    width: 500px;
+    height: auto;
+    max-height: 450px;
+    margin-bottom: 50px;
+
+
+}
+.wavesContainer{
+    margin-bottom: -5px;
+}

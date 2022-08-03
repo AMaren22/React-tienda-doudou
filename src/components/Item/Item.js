@@ -1,15 +1,16 @@
 import './item.css'
+import { Link } from 'react-router-dom'
 
-const Item = ({product}) =>{
+const Item = ({img, name, price, stock,id}) =>{
     
     return(
-        <div onClick={()=>console.log("hiciste click en la tarjeta")} className='cardProduct'>
-            <img alt="Foto del producto" className='productImg' src={product.img}/>
-            <span className='itemName' >{product.name}</span>
+        <Link to={`/detail/${id}`} className='cardProduct'>
+            <img alt="Foto del producto" className='productImg' src={img}/>
+            <span className='itemName' >{name}</span>
             <span className='itemPrice' >
-                {product.stock === 0 ? 'Sin Stock' : `$ ${product.price}`}
-                </span>
-        </div>
+                {stock === 0 ? 'Sin Stock' : `$ ${price}`}
+            </span>
+        </Link>
     )
 }
 

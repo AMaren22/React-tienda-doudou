@@ -1,12 +1,14 @@
+import { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount'
 import './itemDetail.css'
+import {Link} from 'react-router-dom'
 
 const ItemDetail = ({img, name, price, description}) =>{
+    const [quantity, setQuantity] = useState(0)
+    
     const addProduct = (count) => {
-        alert(`Agregaste ${count} producto al carrito`);
-      };
-
-      console.log(img)
+        setQuantity(count)
+    };  
     return(
         <div className='itemDetailCont'>
             <div className='imgDetailContainer'>
@@ -16,7 +18,8 @@ const ItemDetail = ({img, name, price, description}) =>{
                 <span className='itemDetailName'>{name}</span>
                 <span className='itemDetailPrice'>${price}</span>
                 <p className='itemDetailDescrip'>{description}</p>
-                <ItemCount addProduct={addProduct} stock={7} />
+                {quantity > 0 ? <Link className='linkToCart' to='cart'>Ir al carrito</Link> : <ItemCount addProduct={addProduct} stock={7} />
+}
             </div>
         </div>
     )

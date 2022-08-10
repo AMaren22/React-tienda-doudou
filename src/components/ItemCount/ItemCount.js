@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./itemCount.css";
 
-const ItemCount = ({ addProduct,stock}) => {
+const ItemCount = ({ addProduct,stock,initial=0}) => {
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(initial) 
 
   const increase = () => {
     count < stock && setCount(count + 1);
@@ -31,8 +31,8 @@ const ItemCount = ({ addProduct,stock}) => {
         Add to cart
       </button>
     </div>
-  );
-};
+  )
+}
 
 export default ItemCount;
 

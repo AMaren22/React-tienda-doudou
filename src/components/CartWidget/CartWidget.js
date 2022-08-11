@@ -9,6 +9,11 @@ import { Link } from "react-router-dom";
 const CartWidget = () => {
   const {getQuantityCart} = useContext(CartContext)
   const quantity = getQuantityCart()
+
+  if(quantity === 0){
+    return null
+  }
+
   return (
     <Link to='/cart' className="cart-container">
       <FontAwesomeIcon icon={faCartShopping} className="cart" />

@@ -19,7 +19,7 @@ const ItemDetail = ({id,img, name, price, description,stock}) =>{
 
     const addProduct = (quantity) => {
         setQuantity(quantity)
-        addItems({id,name,price,img,quantity,stock})
+        addItems({id,name,price,img,quantity,stock,description})
     };  
     return(
         <div className='itemDetailCont'>

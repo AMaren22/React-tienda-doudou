@@ -132,7 +132,7 @@ const products = [
   
 ]
 
-export const getProducts = () =>{
+/* export const getProducts = () =>{
     return new Promise((resolve) =>{
         setTimeout(()=>{
             resolve(products)
@@ -154,4 +154,4 @@ export const getProductCategory = (category) =>{
             resolve(products.filter(item => item.category === category))
         },500)
     })
-}
+} */

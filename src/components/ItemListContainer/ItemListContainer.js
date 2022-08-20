@@ -2,7 +2,6 @@
 import ItemList from "../ItemList/ItemList";
 import { useState, useEffect } from "react";
 import "./itemListContainer.css";
-import Footer from "../Footer/Footer";
 import FilterProduct from "../FilterProduct/FilterProduct";
 import { useParams } from "react-router-dom";
 import { collection,query, where,getDocs } from "firebase/firestore";
@@ -48,7 +47,6 @@ const ItemListContainer = (props) => {
       <h1 className="titleProducts" >{props.greeting}</h1>
       <FilterProduct/>
       <ItemList products={products}/>
-      <Footer/>
     </div>
   );
 };

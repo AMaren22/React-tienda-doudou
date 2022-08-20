@@ -1,0 +1,85 @@
+.checkOrderContainer{
+    width: 80%;
+    margin: 20px 0;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 7px rgba(216, 189, 162, 0.7);
+}
+.checkOrderContainer h1{
+    text-align: center;
+    color: #d7ab84;
+}
+form{
+    display: flex;
+    flex-direction: column;
+
+}
+.inputContainers{
+    display: flex;
+
+}
+.buyerContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    padding: 0 0 30px 20px;
+}
+.buyerContainer h2{
+    margin: -10px 0;
+}
+.buyerContainer label{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+.buyerContainer label input{
+    width: 80%;
+    margin-top: 5px;
+    height: 25px;
+    border: 1px solid #d7ab84 ;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: gray;
+    font-weight: 600;
+}
+.locationContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    padding: 0 0 30px 10px;
+}
+.locationContainer h2{
+    margin: -10px 0;
+}
+.locationContainer label{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+.locationContainer label input{
+    width: 80%;
+    margin-top: 5px;
+    height: 25px;
+    border: 1px solid #d7ab84 ;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: gray;
+    font-weight: 600;
+}
+.buttonSubmit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin: 10px 0 20px 30%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: #50A689;
+    color: #fff;
+    text-decoration: none;
+}

@@ -10,7 +10,6 @@ const HomeMain = () =>{
         <div className="homeMainContainer">
             <HomeMainUp/>
             <HomeMainDown/>
-            <Footer/>
         </div>
     )
 }

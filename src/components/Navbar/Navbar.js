@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+/*  import addProducts from "../../services/addproducts"; */
 import CartWidget from "../CartWidget/CartWidget";
 import "./navbar.css";
 
@@ -17,7 +18,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to='/products' className="navbar-efecto">
+          <Link to='/products'  /* onClick={addProducts} */  className="navbar-efecto">
             Productos
           </Link>
         </li>

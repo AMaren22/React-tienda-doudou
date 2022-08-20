@@ -1,6 +1,6 @@
 const products = [
     { 
-        id: '1', 
+     
         name: 'Bolsas tejidas', 
         price: 1000, 
         category: 'Niños-Niñas', 
@@ -10,7 +10,7 @@ const products = [
     },
     
     { 
-        id: '2', 
+     
         name: 'Frutas y verduras tejidas', 
         price: 0, 
         category: 'Niños-Niñas', 
@@ -20,7 +20,7 @@ const products = [
     },
     
     { 
-        id: '3', 
+     
         name: 'Mininas', 
         price: 1500, 
         category: 'Niños-Niñas', 
@@ -30,7 +30,7 @@ const products = [
     },
     
     { 
-        id: '4', 
+        
         name: 'Playmate arcoiris', 
         price: 5000, 
         category: 'Bebes', 
@@ -40,7 +40,7 @@ const products = [
     },
     
     { 
-        id: '5', 
+     
         name: 'Toallón con capucha', 
         price: 2000, 
         category: 'Bebes', 
@@ -50,7 +50,7 @@ const products = [
     },
     
     { 
-        id: '6', 
+     
         name: 'Toalla + babita', 
         price: 2500, 
         category: 'Bebes', 
@@ -60,7 +60,7 @@ const products = [
     },
     
     { 
-        id: '7', 
+     
         name: 'Turbantes', 
         price: 500, 
         category: 'Niños-Niñas', 
@@ -70,7 +70,7 @@ const products = [
     },
     
     { 
-        id: '8', 
+     
         name: 'Playmate oveja', 
         price: 5000, 
         category: 'Bebes', 
@@ -80,7 +80,7 @@ const products = [
     },
     
     { 
-        id: '9', 
+     
         name: 'Playmate ositos', 
         price: 5000, 
         category: 'Bebes', 
@@ -90,7 +90,7 @@ const products = [
     },
     
     { 
-        id: '10', 
+         
         name: 'Playmate estrellas', 
         price: 5000, 
         category: 'Bebes', 
@@ -100,7 +100,7 @@ const products = [
     },
     
     { 
-        id: '11', 
+         
         name: 'Mantas animales', 
         price: 1800, 
         category: 'Niños-Niñas', 
@@ -110,7 +110,7 @@ const products = [
     },
     
     { 
-        id: '12', 
+         
         name: 'Mantas osos', 
         price: 1800, 
         category: 'Niños-Niñas', 
@@ -120,7 +120,7 @@ const products = [
     },
     
     { 
-        id: '13', 
+         
         name: 'Manta conejos', 
         price: 1800, 
         category: 'Niños-Niñas', 
@@ -155,3 +155,5 @@ export const getProductCategory = (category) =>{
         },500)
     })
 } */
+
+export default products

@@ -1,5 +1,5 @@
 import Cart from '../Cart/Cart'
-import Footer from '../Footer/Footer'
+
 import './cartContainer.css'
 
 const CartContainer = () =>{
@@ -12,7 +12,6 @@ const CartContainer = () =>{
                 <h1 className='cartTitle'>Carrito</h1>
             </div>
             <Cart/>
-            <Footer/>
         </div>
     )
 }

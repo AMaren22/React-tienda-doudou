@@ -22,7 +22,7 @@ const ChekOrder = () =>{
         const [inputCity, setInputCity] = useState('')
         const [inputPostal, setInputPostal] = useState('')
 
-        const holaMundo = () =>{
+        const create = () =>{
 
             createOrder({inputName,inputSurname,inputDni,inputEmail,inputPhone,
                 inputAdress,inputDoor,inputState,inputCity,inputPostal})
@@ -72,7 +72,7 @@ const ChekOrder = () =>{
                         </label>
                     </div>
                 </div>
-                <Link to='/Ticket'   className='buttonSubmit'  onClick={holaMundo} 
+                <Link to='/Ticket'   className='buttonSubmit'  onClick={create} 
                 >Confirmar</Link>
             </form>
         </div>

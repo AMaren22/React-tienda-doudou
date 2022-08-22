@@ -19,8 +19,14 @@ const Navbar = () => {
         </li>
         <li>
           <Link to='/products'  /* onClick={addProducts} */  className="navbar-efecto">
-            Productos
+          Ver todos los productos
           </Link>
+        </li>
+        <li>
+        <Link className="navbar-efecto" to='/category/Bebes'>Bebes</Link>
+        </li>
+        <li>
+        <Link className="navbar-efecto" to='/category/Niños-Niñas'>Niños/Niñas</Link>
         </li>
         <li>
           <Link to='/contacts' className="navbar-efecto">

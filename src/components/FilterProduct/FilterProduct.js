@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+/* import { Link } from 'react-router-dom'
 import './filterProduct.css'
 
 const FilterProduct = () =>{
@@ -17,4 +17,4 @@ const FilterProduct = () =>{
     )
 }
 
-export default FilterProduct
+export default FilterProduct */

@@ -7,10 +7,10 @@ import Contact from './components/Contact/Contact';
 import { CartContextProvider } from './context/CartContext';
 import CartContainer from './components/CartContainer/CartContainer';
 import CheckOrder from './components/CheckOrder/CheckOrder';
-import './App.css';
 import Footer from './components/Footer/Footer';
 import Ticket from './components/Ticket/Ticket';
 import { OrderContextProvider } from './context/OrderContext';
+import './App.css';
 
 function App() {
 
@@ -26,7 +26,7 @@ function App() {
                       <Route path="/products" element={<ItemListContainer greeting='Nuestros productos' />} />
                       <Route path='/detail/:productId' element={<ItemDetailContainer/>}/>
                       <Route path='/category/:categoryId'element={<ItemListContainer/>}/>
-                      <Route path='/contacts' element={<Contact contact={'Contacto'}/>}/>
+                      <Route path='/contacts' element={<Contact contact='Contacto'/>}/>
                       <Route path='/cart' element={<CartContainer/>}/>
                       <Route path='/checkOrder' element={<CheckOrder/>} />
                       <Route path='/ticket' element={<Ticket/>}/>

@@ -3,17 +3,18 @@ import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyAiqCjULVz27hLyg2gDoLiD-T3TgghHIVI",
+  apiKey: process.env.REACT_APP_apikey,
 
-  authDomain: "coderhouse-react-bef71.firebaseapp.com",
+  authDomain: process.env.REACT_APP_authDomain,
 
-  projectId: "coderhouse-react-bef71",
+  projectId: process.env.REACT_APP_projectId,
 
-  storageBucket: "coderhouse-react-bef71.appspot.com",
+  storageBucket: process.env.REACT_APP_storageBucket,
 
-  messagingSenderId: "463334369887",
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
 
-  appId: "1:463334369887:web:08b518662da3c67e7189ea"
+  appId: process.env.REACT_APP_appId
+
 
 };
 

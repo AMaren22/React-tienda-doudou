@@ -1,50 +1,30 @@
 
 import ItemList from "../ItemList/ItemList";
-import { useState, useEffect } from "react";
 import "./itemListContainer.css";
 import { useParams } from "react-router-dom";
-import { collection,query, where,getDocs } from "firebase/firestore";
-import { dataBase } from "../../services/services";
+import { useAsync } from "../../hooks/useAsync";
+import { fetcher } from "../../utils/fetcher";
+import { getProducts } from "../../services/firestore";
 
 
 const ItemListContainer = (props) => {
-  const [products, setProducts] = useState([])
-  const [loading,setLoading] = useState(true)
-
   const {categoryId} = useParams();
 
-  useEffect (() =>{
+  const {loading, products, error } = useAsync(fetcher(getProducts, categoryId),[categoryId])
 
-    const ref = !categoryId ? 
-      collection(dataBase, 'products'):
-      query(collection(dataBase,'products'), where('category', '==', categoryId))
+  if(loading){
+    return <div className="loadingContainer"><span className="loadingProduct"></span></div>
+  }
 
-      getDocs(ref).then(resp =>{
-        const products = resp.docs.map(doc =>{
-          const values = doc.data()
-          return {id: doc.id, ...values}
-        })
-        setProducts(products)
-      }).catch(err =>{
-        console.log(err)
-      }).finally(()=>{
-        setLoading(false)
-      })
+  if(error){
+    return <h1>Algo salió mal...</h1>
+  }
 
-
-    
-  
-  },[categoryId])
-
-    if(loading){
-      return <div className="loadingContainer"><span className="loadingProduct"></span></div>
-    }
-  
   
   return (
     <div className="itemListContainer">
       <h1 className="titleProducts" >{props.greeting}</h1>
-      <ItemList products={products}/>
+       <ItemList products={products}/> 
     </div>
   );
 };

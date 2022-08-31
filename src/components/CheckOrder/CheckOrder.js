@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react'
-import {Link, useNavigate} from 'react-router-dom'
-import Ticket from '../Ticket/Ticket'
+import {useNavigate} from 'react-router-dom'
 import { OrderContext } from '../../context/OrderContext'
 import { checkInputsVoid } from '../../utils/checkInput'
 import './checkOrder.css'

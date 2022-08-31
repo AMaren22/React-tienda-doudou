@@ -1,13 +1,17 @@
 import { useContext, useState } from 'react'
-import {Link} from 'react-router-dom'
-import './checkOrder.css'
+import {Link, useNavigate} from 'react-router-dom'
+import Ticket from '../Ticket/Ticket'
 import { OrderContext } from '../../context/OrderContext'
+import { checkInputsVoid } from '../../utils/checkInput'
+import './checkOrder.css'
 
 
 
 const ChekOrder = () =>{
     
     const {createOrder} = useContext(OrderContext)
+
+    const navigate = useNavigate() 
     
 
 
@@ -23,14 +27,25 @@ const ChekOrder = () =>{
         const [inputPostal, setInputPostal] = useState('')
 
         const create = () =>{
-
-            createOrder({inputName,inputSurname,inputDni,inputEmail,inputPhone,
+            checkInputsVoid({inputName,inputSurname,inputDni,inputEmail,inputPhone,
                 inputAdress,inputDoor,inputState,inputCity,inputPostal})
+
+              if(checkInputsVoid({inputName,inputSurname,inputDni,inputEmail,inputPhone,
+                inputAdress,inputDoor,inputState,inputCity,inputPostal})){
+                alert('No deje campos vacios, todos son obligatorios')
+             }else{
+                 createOrder({inputName,inputSurname,inputDni,inputEmail,inputPhone,
+                    inputAdress,inputDoor,inputState,inputCity,inputPostal})
+
+                    return navigate('/Ticket')
+
+             }    
+ 
         }
 
       
      
-    return(
+     return(
         <div className="checkOrderContainer">
             <h1>Último paso</h1>
             <form>
@@ -72,11 +87,10 @@ const ChekOrder = () =>{
                         </label>
                     </div>
                 </div>
-                <Link to='/Ticket'   className='buttonSubmit'  onClick={create} 
-                >Confirmar</Link>
+                <div className='buttonSubmit' onClick={create}> Confirmar</div>
             </form>
         </div>
-    )
+    ) 
 }
 
 
